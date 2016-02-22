@@ -1,2 +1,42 @@
-<h1>Pgp#editor</h1>
-<p>Find me in app/views/pgp/editor.html.erb</p>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Programming++! Build Your Own Blocks</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<script type="text/javascript" src="assets/pgpedit/morphic.js"></script>
+		<script type="text/javascript" src="assets/pgpedit/widgets.js"></script>
+		<script type="text/javascript" src="assets/pgpedit/blocks.js"></script>
+		<script type="text/javascript" src="assets/pgpedit/threads.js"></script>
+		<script type="text/javascript" src="assets/pgpedit/objects.js"></script>
+		<script type="text/javascript" src="assets/pgpedit/gui.js"></script>
+		<script type="text/javascript" src="assets/pgpedit/paint.js"></script>
+		<script type="text/javascript" src="assets/pgpedit/lists.js"></script>
+		<script type="text/javascript" src="assets/pgpedit/byob.js"></script>
+		<script type="text/javascript" src="assets/pgpedit/xml.js"></script>
+		<script type="text/javascript" src="assets/pgpedit/tore.js"></script>
+		<script type="text/javascript" src="assets/pgpedit/locale.js"></script>
+		<script type="text/javascript" src="assets/pgpedit/cloud.js"></script>
+		<script type="text/javascript" src="assets/pgpedit/shjavascripts/pgpedit/a512.js"></script>
+		<script type="text/javascript" src="assets/pgpedit/FileSaver.js"></script>
+		<script type="text/javascript" src="assets/pgpedit/ypr.js"></script>
+		<script type="text/javascript"
+
+			var world;
+			window.onload = function () {
+				world = new WorldMorph(document.getElementById('world'));
+                world.worldCanvas.focus();
+				new IDE_Morph().openIn(world);
+        		loop();
+			};
+			function loop() {
+        		requestAnimationFrame(loop);
+				world.doOneCycle();
+			}
+		</script>
+	</head>
+	<body style="margin: 0;">
+	<h1> HELLO! </h1>
+		<canvas id="world" tabindex="1" style="position: absolute;" />
+	</body>
+</html>
